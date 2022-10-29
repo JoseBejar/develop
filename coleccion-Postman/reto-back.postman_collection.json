@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "ba36cda7-e397-4b94-bd27-e94b7197dfd3",
+		"name": "reto-back",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7296165"
+	},
+	"item": [
+		{
+			"name": "http://localhost:1234/v1/receta/recetas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1234/v1/receta/recetas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"v1",
+						"receta",
+						"recetas"
+					]
+				},
+				"description": "listar recetas"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1234/v1/receta/save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"title\": \"Roasted Sunchoke, Apple, and Onion Soup\",\r\n            \"image\": \"https://spoonacular.com/recipeImages/658674-312x231.jpg\",\r\n            \"likes\": 3\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/v1/receta/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"v1",
+						"receta",
+						"save"
+					]
+				},
+				"description": "guardar receta"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1234/v1/receta/query",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"ingredientes\":[\"apple\",\"onion\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/v1/receta/query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"v1",
+						"receta",
+						"query"
+					]
+				},
+				"description": "buscar receta por ingredientes"
+			},
+			"response": []
+		}
+	]
+}
